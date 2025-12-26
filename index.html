@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Noor Naveed Complete His Education | Emergency Fund</title>
+    <meta name="description" content="Help Noor Naveed raise PKR 50,000 for his final exams. His future depends on your support. Every contribution matters.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Support Noor</span>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="donate-btn-nav" onclick="scrollToSection('donate')">
+                    <i class="fas fa-heart"></i>
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="float-element"></div>
+                <div class="float-element"></div>
+                <div class="float-element"></div>
+                <div class="float-element"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-clock"></i>
+                <span>URGENT: Final Exams Starting Soon</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Help <span class="highlight">Noor Naveed</span> 
+                Complete His Education Journey
+            </h1>
+            
+            <p class="hero-subtitle">
+                A dedicated student needs your support to sit for his final exams. 
+                His entire future hangs in the balance.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">PKR 50,000</div>
+                    <div class="stat-label">Target Amount</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="donorsCount">0</div>
+                    <div class="stat-label">Supporters</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="timeLeft">5 Days</div>
+                    <div class="stat-label">Time Left</div>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <button class="cta-primary" onclick="scrollToSection('donate')">
+                    <span>Donate Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="cta-secondary" onclick="scrollToSection('story')">
+                    <span>Read Noor's Story</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <div class="image-container">
+                <div class="image-placeholder" id="noorImageContainer">
+                    <img src="noor.jpg" alt="Noor Naveed - Final Year Student" id="noorImage" style="display: none;">
+                    <div class="placeholder-fallback">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="image-overlay">
+                        <h3>Noor Naveed</h3>
+                        <p>Final Year Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-card">
+                <h3>Fundraising Progress</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-text">
+                            <span id="currentAmount">PKR 0</span> / PKR 50,000
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-details">
+                    <div class="detail">
+                        <span class="percentage" id="progressPercentage">0%</span>
+                        <span class="label">Funded</span>
+                    </div>
+                    <div class="detail">
+                        <span id="remainingAmount">PKR 50,000</span>
+                        <span class="label">Still Needed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Noor's Journey: A Dream at Stake</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="story-paragraph">
+                        <i class="story-icon fas fa-book-open"></i>
+                        <div>
+                            <h3>The Dedication</h3>
+                            <p>Noor Naveed has spent years pursuing his education with unwavering determination. Through late nights of studying and countless sacrifices, he has maintained excellent grades and is now just steps away from graduating.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-paragraph">
+                        <i class="story-icon fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h3>The Crisis</h3>
+                            <p>With final exams approaching, Noor faces an unexpected financial crisis. He needs PKR 50,000 to clear his dues and sit for his final examinations. Without this amount, his degree will be withheld, and years of hard work will be in jeopardy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-paragraph">
+                        <i class="story-icon fas fa-heart"></i>
+                        <div>
+                            <h3>The Hope</h3>
+                            <p>Your support can make the difference between Noor's dreams becoming reality or being shattered. Every rupee you contribute brings him closer to his graduation day and opens the door to a brighter future.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-visual">
+                    <div class="timeline">
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Years of Study</h4>
+                                <p>Dedicated learning and academic excellence</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Final Semester</h4>
+                                <p>Approaching graduation with outstanding grades</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item current">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Financial Crisis</h4>
+                                <p>Need PKR 50,000 to sit for final exams</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Graduation</h4>
+                                <p>With your help, Noor can achieve his dreams</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Impact Matters</h2>
+                <div class="header-line"></div>
+                <p>See how your contribution can change a life forever</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>PKR 1,000</h3>
+                    <p>Covers exam registration fees for one subject</p>
+                    <div class="impact-progress">
+                        <div class="impact-bar" style="width: 2%"></div>
+                    </div>
+                </div>
+                
+                <div class="impact-card featured">
+                    <div class="impact-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>PKR 5,000</h3>
+                    <p>Covers fees for multiple subjects and administrative costs</p>
+                    <div class="impact-progress">
+                        <div class="impact-bar" style="width: 10%"></div>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>PKR 10,000</h3>
+                    <p>Significantly contributes to Noor's graduation fund</p>
+                    <div class="impact-progress">
+                        <div class="impact-bar" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <div class="donate-card">
+                <div class="donate-header">
+                    <h2>Support Noor's Education</h2>
+                    <p>Your generosity can secure his future</p>
+                </div>
+                
+                <div class="donation-options">
+                    <div class="amount-buttons">
+                        <button class="amount-btn" data-amount="1000">PKR 1,000</button>
+                        <button class="amount-btn featured" data-amount="5000">PKR 5,000</button>
+                        <button class="amount-btn" data-amount="10000">PKR 10,000</button>
+                        <button class="amount-btn" data-amount="custom">Custom</button>
+                    </div>
+                    
+                    <div class="custom-amount" id="customAmount" style="display: none;">
+                        <input type="number" id="amountInput" placeholder="Enter amount" min="100">
+                        <span class="currency">PKR</span>
+                    </div>
+                </div>
+                
+                <div class="payment-info">
+                    <h3>Send Your Donation</h3>
+                    <div class="payment-details">
+                        <div class="payment-method">
+                            <div class="method-header">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>NayaPay Transfer</h4>
+                            </div>
+                            <div class="account-details">
+                                <div class="detail-row">
+                                    <span class="label">Account Number:</span>
+                                    <span class="value" id="accountNumber">03228556114</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('03228556114', this)">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="label">Account Name:</span>
+                                    <span class="value">Meesam Imran</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="confirmation-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>After sending your donation, the page will automatically update to reflect your contribution. Every rupee counts towards Noor's education.</p>
+                    </div>
+                </div>
+                
+                <button class="donate-now-btn" id="donateBtn">
+                    <i class="fas fa-heart"></i>
+                    <span>Donate Now</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Messages of Support</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial active">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Education is the key to breaking the cycle of poverty. Noor's dedication deserves our support."</p>
+                    <div class="author">
+                        <strong>Anonymous Supporter</strong>
+                        <span>Donated PKR 2,000</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"I was once in Noor's position. A helping hand can change everything. Let's give him that chance."</p>
+                    <div class="author">
+                        <strong>Former Student</strong>
+                        <span>Donated PKR 5,000</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Every student deserves the chance to complete their education. Noor's future is in our hands."</p>
+                    <div class="author">
+                        <strong>Educator</strong>
+                        <span>Donated PKR 3,000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="showTestimonial(0)"></span>
+                <span class="dot" onclick="showTestimonial(1)"></span>
+                <span class="dot" onclick="showTestimonial(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>For any questions about this fundraiser, please reach out through the provided NayaPay account.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Transparency</h4>
+                    <p>All donations go directly to Noor's educational expenses. Updates will be shared regularly.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Share This Campaign</h4>
+                    <div class="share-buttons">
+                        <button onclick="shareOnWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                        <button onclick="shareOnFacebook()">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button onclick="shareOnTwitter()">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Support Noor Naveed Campaign. Made with ❤️ for education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
